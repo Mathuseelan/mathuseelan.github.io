@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+  .contact{
+    height: 100vh;
+    width: 100%;
+    font-family: "Sora", sans-serif;
+
+
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact{
+    height: 100vh;
+      scroll-snap-align: start;
+    background-color: #3a4042;
+    box-shadow: 0px 0px 23px -3px rgba(0,0,0,0.40);
+    color: rgb(230, 220, 220);
+}
+
+.heading h1{
+    padding: 70px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.contact-content{
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    color: rgb(99, 92, 92);
+}
+
+.in-name,
+.in-email,
+.in-subject,
+.in-message,
+.submit{
+    padding: 0 15px;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+        
+    }
+
+.submit{
+    background: linear-gradient(to top, #656872 0%, #504545 100%);
+    color:#ffffff;
+    
+}
+
+.submit:hover{
+    background: linear-gradient(to top, #3e4049 0%, #464049 100%);
+    cursor: pointer;
+}
+.submit:focus{
+    background: linear-gradient(105.4deg, rgb(49, 45, 49) 23.9%, rgb(63, 68, 70) 86.5%);
+}
+.in-name,
+.in-email,
+.in-subject,
+.submit{    
+    height: 50px;
+    
+}
+
+.in-name:focus,
+.in-email:focus,
+.in-subject:focus,
+.in-message:focus{
+    outline:none;
+}
+
+.contact-left ::placeholder{
+    font-family: 'outfit';
+    font-size: 18px;
+        
+}
+
+.contact-right h1,
+.contact-right p{
+    font-weight: 600;
+    text-align: left; 
+    
+}
+.contact-right h1{
+    color: rgb(223, 217, 217);
+    margin-bottom: 10px;
+}
+.contact-right p{
+    color: rgba(184, 169, 169, 0.849);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-right .phone,
+.contact-right .email{
+    border: none;
+    font-size: 13px;
+    
+}
+
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    
+}
