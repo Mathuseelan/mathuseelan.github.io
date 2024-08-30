@@ -1,0 +1,1085 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --logo-color: #cb9865;
+}
+
+/*  
+font-family: "Passion One", sans-serif;
+font-family: "DM Sans", sans-serif;
+font-family: "Forum", serif;
+  */
+/* ######################################      navbar */
+body,html{
+  scroll-behavior: smooth;
+}
+header{
+  background-color: black;
+}
+/* Top header #################################################################################################*/
+.top-header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.top-header {
+  background-color: rgba(0, 0, 0, 0.295);
+  font-family: "DM Sans", sans-serif;
+
+  border-bottom: 2px solid rgba(128, 128, 128, 0.349);
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 15px;
+}
+/* navbar###################################################################################################################### */
+
+.navbar {
+  background-color: black;
+  z-index: 222;
+  overflow: hidden;
+  font-family: "Passion One", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar__list {
+  height: 90px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__item {
+  margin: 0 20px;
+}
+.navbar__logo {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "Passion One", sans-serif;
+}
+.navbar__menuIcon{
+  font-size: 40px;
+  color: white;
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.1s linear;
+}
+.navbar__menuIcon:hover{
+  color: rgb(155, 152, 152);
+}
+.navbar__logo img {
+  width: 100px;
+  padding: 10px;
+}
+.navbar__link {
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+font-family: "DM Sans", sans-serif;
+
+  font-weight: 400;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.navbar__link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  border-radius: 5px;
+  bottom: -8px;
+  left: 50%;
+  background-color: var(--logo-color);
+  transition: all 0.15s ease;
+}
+.navbar__link:hover {
+  color: var(--logo-color);
+}
+.navbar__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+.navbar__button {
+  border: none;
+  padding: 30px;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: var(--logo-color);
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.navbar__button::after {
+  content: "Find a Table";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.navbar__button:hover::after {
+  bottom: 0;
+}
+
+.navbar__button:hover {
+  background-color: transparent;
+  border: 3px solid var(--logo-color);
+}
+
+/* ######################################      home */
+.home {
+  /* width: 100vw; */
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url("./images/nood.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  
+}
+
+.icon {
+  color: white;
+}
+header {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.37);
+  padding: 0 20px;
+}
+.header__left,
+.header__right {
+  display: flex;
+  gap: 30px;
+}
+
+.home__content {
+  /* height: 70vh; */
+  margin-top: 60px;
+  bottom: 0;
+
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  background-position: right;
+  background-size: cover;
+  object-fit: contain;
+  opacity: 0;
+  transform: translate(80px);
+  animation: moveUpReveal 2s ease-out forwards;
+}
+
+@keyframes moveUpReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.home__content h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.home__content h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  color: var(--logo-color);
+  text-transform: capitalize;
+}
+.home__content h1 {
+  font-family: "Forum", serif;
+
+  font-size: 80px;
+}
+
+.home__content button {
+  border: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: 3px solid var(--logo-color);
+  color: var(--logo-color);
+
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.home__content button::after {
+  content: "view our menu";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--logo-color);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.home__content button:hover::after {
+  bottom: 0;
+}
+
+/* ########################################################################### offer page ############################# */
+.offerPage {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(14, 13, 12);
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Forum", serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.offerPage__text-content {
+  text-align: center;
+}
+.offerPage__heading {
+  font-size: 50px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.offerPage__text-content p {
+  text-align: center;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 50%;
+  line-height: 30px;
+  margin-top: 20px;
+  font-family: "DM Sans", sans-serif;
+  word-spacing: 5px;
+}
+.offerPage__text-content h5 {
+  text-transform: uppercase;
+  color: var(--logo-color);
+  padding-top: 20px;
+  font-family: sans-serif;
+  font-family: 500;
+}
+.offerPage__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.offerPage__card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.offerPage__card a {
+  text-align: center;
+  font-size: 35px;
+  text-decoration: none;
+}
+.offerPage__card a:hover {
+  color: var(--logo-color);
+  cursor: pointer;
+}
+.offerPage__card img {
+  border: 1px solid rgb(158, 157, 157);
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.card-2 {
+  margin-top: 100px;
+}
+.offerPage__card img:hover {
+  transform: scale(1.1);
+  transform: rotate(3deg);
+}
+
+.animated-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.animated-image-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: moveTopRight 4s infinite alternate;
+}
+.animated-image-2 {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  animation: moveBottomLeft 4s infinite alternate;
+}
+
+.animated-image-3 {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  animation: moveBottomRight 3s infinite alternate;
+}
+.animated-image-4 {
+  position: absolute;
+  bottom: 0;
+  right: -200px;
+  animation: animatedimage4 5s infinite alternate;
+}
+.animated-image-5 {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  animation: animatedimage5 5s infinite alternate;
+}
+@keyframes animatedimage4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(108px, -400px);
+  }
+}
+
+@keyframes animatedimage5 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-200px, 100px);
+  }
+}
+@keyframes moveBottomRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, -200px);
+  }
+}
+@keyframes moveTopRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, 200px);
+  }
+}
+
+@keyframes moveBottomLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, -200px);
+  }
+}
+
+/* ########################################################################### signature dish############################# */
+.signatureDishPage {
+  height: 100vh;
+  background-color: rgb(23, 24, 25);
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  overflow: hidden;
+}
+.signatureDish__left {
+  flex: 1;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.signatureDish__left img {
+  width: 100%;
+  object-fit: top;
+  border-radius: 2px;
+  width: 900px;
+}
+
+.signatureDish__right {
+  flex: 1;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.signatureDish__right-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+  width: 60%;
+  margin-left: 15%;
+}
+
+.signatureDish__right-container h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 2px;
+  color: var(--logo-color);
+}
+
+.signatureDish__right-container h1 {
+  font-size: 60px;
+  font-family: "Forum", serif;
+  font-weight: 500;
+  font-weight: 600;
+}
+
+.signatureDish__right-container p {
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  line-height: 30px;
+}
+
+.signatureDish__right button {
+  border: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: 2px solid var(--logo-color);
+  color: var(--logo-color);
+  width: 250px;
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.signatureDish__right button::after {
+  content: "view our menu";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--logo-color);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.signatureDish__right button:hover::after {
+  bottom: 0;
+}
+
+/* ########################################################################### menu page############################# */
+.menuPage {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(14, 13, 12);
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Forum", serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.menuPage__heading h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 2px;
+  color: var(--logo-color);
+  margin-bottom: 20px;
+}
+
+.menuPage__heading h1 {
+  font-size: 60px;
+  font-family: "Forum", serif;
+
+  font-weight: 500;
+}
+
+.menuPage__content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 8%;
+}
+.content-left,
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6%;
+  gap: 45px;
+}
+.content-left {
+  border-right: 1px solid grey;
+}
+
+.food {
+  display: flex;
+  flex-direction: row;
+}
+.food img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  margin-right: 15px;
+  transition: all 0.1s linear;
+}
+.food img:hover {
+  transform: scale(1.1);
+  transform: rotate(10deg);
+  border: 2px solid rgba(255, 255, 255, 0.774);
+  cursor: pointer;
+}
+.food p {
+  text-align: left;
+  font-family: "DM Sans", sans-serif;
+  color: #a7a7a7;
+}
+.food h3 {
+  text-align: left;
+  color: var(--logo-color);
+  margin-bottom: 10px;
+}
+
+.menuPage__footer button {
+  border: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: 2px solid var(--logo-color);
+  color: var(--logo-color);
+  width: 250px;
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menuPage__footer button::after {
+  content: "view our menu";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--logo-color);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.menuPage__footer button:hover::after {
+  bottom: 0;
+}
+.menuPage__footer p {
+  font-size: 18px;
+  margin: 10px;
+  font-family: "Forum", serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+/* ##############################################speacialss */
+.specials {
+  height: 110vh;
+  width: 100%;
+  background-color: rgb(14, 13, 12);
+  background-color: rgb(23, 24, 25);
+
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Forum", serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.specials__heading h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 2px;
+  color: var(--logo-color);
+  margin-bottom: 20px;
+}
+
+.specials__heading h1 {
+  font-size: 60px;
+  font-family: "Forum", serif;
+
+  font-weight: 500;
+}
+.specials__image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 100px;
+}
+.specials__card {
+  width: 250px;
+}
+.specials__card img {
+  width: 100%;
+  border: 2px solid rgba(202, 194, 194, 0.664);
+  transition: all 0.2s linear;
+}
+.specials__card img:hover {
+  transform: scale(1.1);
+  transform: rotate(5deg);
+  cursor: pointer;
+}
+.specials__card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+  color: var(--logo-color);
+}
+.specials__card:nth-of-type(2) {
+  margin-top: 40px;
+}
+.specials__card:nth-of-type(4) {
+  margin-top: 50px;
+}
+
+.specials__card p {
+  font-size: 18px;
+  color: rgba(194, 190, 190, 0.616);
+}
+.specials__card span {
+  font-size: 30px;
+  margin: 10px 0;
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  color: var(--logo-color);
+}
+
+.specials button {
+  border: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: 2px solid var(--logo-color);
+  color: var(--logo-color);
+  width: 250px;
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.specials button::after {
+  content: "view our menu";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--logo-color);
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.specials button:hover::after {
+  bottom: 0;
+}
+/* $############################################contact */
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(14, 13, 12);
+  background-color: rgb(24, 23, 23);
+
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Forum", serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact__container {
+  background-color: rgb(14, 13, 12);
+
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  margin: auto;
+  margin-top: 60px;
+  gap: 40px;
+
+}
+
+.reservation-form h1 {
+  font-size: 60px;
+  font-family: "Forum", serif;
+
+  font-weight: 500;
+}
+.reservation-form p {
+  font-size: 18px;
+  margin: 10px;
+  font-family: "Forum", serif;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #333;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  margin-right: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 1px solid var(--logo-color);
+}
+.form-group textarea {
+  height: 200px;
+  resize: none;
+}
+.contact-info h1 {
+  font-size: 60px;
+  font-family: "Forum", serif;
+
+  font-weight: 500;
+}
+.contact .contact-info{
+  padding: 20px;
+}
+.phone{
+  font-size: 20px;
+  font-family: "Forum", serif;
+margin: 10px;
+
+}
+.phone span{
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--logo-color);
+  margin: 10px;
+}
+
+.location,.timing{
+  margin-top: 20px;
+}
+.contact-info h3{
+  font-size: 20px;
+  margin: 20px 0 10px;
+}
+.location p,.timing p{
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.39);
+}
+
+.contact .contact-info{
+  background-color: rgb(55, 55, 59);
+}
+
+.reservation-form button {
+  padding-right: 10px;
+  border: none;
+  padding: 30px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  background-color: var(--logo-color);
+  position: relative;
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.reservation-form button::after {
+  content: "Book a table";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: bottom 0.3s ease;
+}
+
+.reservation-form button:hover::after {
+  bottom: 0;
+}
+
+.reservation-form button:hover {
+  background-color: transparent;
+  border: 1px solid var(--logo-color);
+}
+/* foottr ######################################################*/
+footer{
+  background-color: black;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+footer img{
+  width: 200px;
+  padding: 10px;
+}
+.footer__icons{
+  display: flex;align-items: center;justify-content: center;gap: 20px; font-size: 40px;
+}
+footer a{
+  text-decoration: none;
+  color: orange;
+}
+hr{
+  color:white;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 100%;
+    height: 2px; /* Set the thickness */
+}
+
+
+
+
+
+/* @media (min-width: 768px) */
+
+@media only screen and (min-width: 600px) and (max-width: 980px){
+  .home{
+    height: 60vh;
+  }
+  .offerPage__image-container{
+    gap: 10px;
+  }
+  .offerPage img{
+    width: 90%;
+  }
+  .offerPage .animated-image-2{
+    display: none;
+  }
+  .specials{
+    height: auto;
+  }
+  .specials__image-container{
+    gap: 20px;
+    
+  }
+  .contact{
+    height: auto;
+  }
+
+  
+  .navbar__logo{
+    display: none;
+  }
+  .navbar__button{
+    display: none ;
+  }
+  
+
+}
+
+@media only screen and (max-width: 599px){
+  /* navbar */
+  .navbar__menuIcon{
+    display: block;
+  }
+  
+  .navbar__button{
+    display: none ;
+  }
+  header{
+    display: none;
+  }
+  .navbar__list{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+  }
+  .navbar__link{
+    font-size: 15px;
+  }
+  .navbar{
+    height: 200px;
+  }
+
+  /* home */
+  .home__content h1{
+    font-size: 30px;
+  }
+  .home__content h4{
+    font-size: 15px;
+  }
+/* offerpage */
+.offerPage__image-container{
+  gap: 20px;
+}
+.offerPage img{
+  width: 150px;;
+}
+/* signature page */
+.signatureDishPage{
+  flex-direction: column;
+}
+.signatureDishPage img{
+  height: auto;
+  width: 100%;
+}
+.signatureDish__left{
+  
+}
+/* menu page */
+.menuPage__content{
+  flex-direction: column;
+  
+}
+.menuPage{
+  height: auto;
+}
+.menuPage .content-left{
+  border: none;
+}
+/* special page */
+.specials__image-container{
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.specials{
+  height: auto;
+}
+/* contact */
+.contact{
+height: auto;
+}
+.contact__container{
+  flex-direction: column;
+}
+}
